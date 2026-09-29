@@ -5,7 +5,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
+/**
+ * Classe de persistencia da entidade usuario
+ */
+
 public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long> {
 
-    Optional<UsuarioEntity> findByUsername(String username);
+    /**
+     * Lista usuarios pelo seu username
+     *
+     * @param nome
+     * @return
+     */
+    Optional<UsuarioEntity> findByNome(String nome);
 }

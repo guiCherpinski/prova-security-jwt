@@ -1,5 +1,6 @@
 package br.prova.jwt.provajwt.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,10 +17,12 @@ import java.util.Set;
 @Getter
 @Setter
 public class PerfilEntity {
+    @Schema(description = "Identificador unico")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Schema(description = "Nome")
     @Column(
             name = "nome",
             nullable = false,
